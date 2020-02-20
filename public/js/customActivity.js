@@ -26,21 +26,6 @@ define([
     connection.on('clickedBack', onClickedBack);
     connection.on('gotoStep', onGotoStep);
     
-    
-    
-    console.log('connection:', addend2);	
-    	
-    console.log('authTokens:', addend2);	
-    	
-    console.log('payload:', addend2);	
-    	
-    console.log('initActivity:', addend2);	
-    	
-    console.log('requestedTokens:', addend2);	
-    	
-    console.log('requestedEndpoints:', addend2);
-    
-    
 
     function onRender() {
         // JB will respond the first time 'ready' is called with 'initActivity'
