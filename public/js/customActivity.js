@@ -14,6 +14,19 @@ define([
     connection.on('requestedTokens', onGetTokens);
     connection.on('requestedEndpoints', onGetEndpoints);
 
+    
+    console.log('connection:', addend2);
+    
+    console.log('authTokens:', addend2);
+    
+    console.log('payload:', addend2);
+    
+    console.log('initActivity:', addend2);
+    
+    console.log('requestedTokens:', addend2);
+    
+    console.log('requestedEndpoints:', addend2);
+    
     connection.on('clickedNext', save);
    
     function onRender() {
