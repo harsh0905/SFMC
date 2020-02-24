@@ -1,7 +1,7 @@
 {
     "workflowApiVersion": "1.1",
     "metaData": {
-       "icon": "",
+       "icon": "images/sms.png",
        "category": "message"
     },
     "type": "REST",
@@ -14,29 +14,41 @@
     "arguments": {
         "execute": {
             "inArguments": [
+                {
+                    "emailAddress": "{{InteractionDefaults.Email}}"
+                },
+                {
+                    "phoneNumber": "{{Contact.Default.PhoneNumber}}"
+                }
             ],
             "outArguments": [
+                {
+                    "foundSignupDate": ""
+                }
             ],
-            "url": "https://createappharsh.herokuapp.com"
+            "url": "https://createappharsh.herokuapp.com/execute"
         }
     },
     "configurationArguments": {
-       "applicationExtensionKey": "f0d991aa-2841-40f6-ba2b-3eb3ad66e116",
+        "applicationExtensionKey": "f0d991aa-2841-40f6-ba2b-3eb3ad66e116",
        "save": {
-           "url": "URI/for/your/activity/save"
+           "url": "https://mc.s10.exacttarget.com/api/journeybuilder/v1/save"
        },
        "publish": {
-           "url": "URI/for/your/activity/publish"
+           "url": "https://mc.s10.exacttarget.com/api/journeybuilder/v1/publish"
        },
        "validate": {
-           "url": "URI/for/your/activity/validate"
+           "url": "https://mc.s10.exacttarget.com/api/journeybuilder/v1/validate"
        },
        "stop": {
-           "url": "URI/for/your/activity/stop"
+           "url": "https://mc.s10.exacttarget.com/api/journeybuilder/v1/stop"
        }
     },
     "wizardSteps": [
-       { "label": "Step 1", "key": "step1" }
+       { "label": "Step 1", "key": "step1" },
+       { "label": "Step 2", "key": "step2" },
+       { "label": "Step 3", "key": "step3" },
+       { "label": "Step 4", "key": "step4", "active": false }
     ],
     "userInterfaces": {
        "configModal": {
@@ -49,9 +61,29 @@
         "arguments": {
             "execute": {
                 "inArguments": [
-                  
+                    {
+                        "phoneNumber": {
+                            "dataType": "Phone",
+                            "isNullable": false,
+                            "direction": "in"   
+                        }
+                    },
+                    {
+                        "emailAddress": {
+                            "dataType": "Email",
+                            "isNullable": false,
+                            "direction": "in"
+                        }
+                    }
                 ],
                 "outArguments": [
+                    {
+                        "foundSignupDate": {
+                            "dataType": "Date",
+                            "direction": "out",
+                            "access": "visible"
+                        }
+                    }
                 ]
             }
         }
