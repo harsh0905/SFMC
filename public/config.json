@@ -64,14 +64,14 @@
                     {
                         "phoneNumber": {
                             "dataType": "Phone",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "in"   
                         }
                     },
                     {
                         "emailAddress": {
                             "dataType": "Email",
-                            "isNullable": false,
+                            "isNullable": true,
                             "direction": "in"
                         }
                     }
