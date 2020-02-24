@@ -43,28 +43,20 @@
     </style>
 
 </head>
-<body>
+    <body>
+
 <div id="step1" class="step">
 
     Select your SMS message:
-    
-    <div class="slds-form-element">
-<label class="slds-form-element__label" for="select-01">Select Label</label>
-<div class="slds-form-element__control">
-<div class="slds-select_container">
-<select class="slds-select" id="select1">
-<option value="">Please select</option>
-<option>Some SMS</option>
-<option>Another SMS</option>
-<option>Third SMS</option>
-<option>Unknown SMS</option>
-</select>
-</div>
-</div>
-</div>
-  
-<button class="slds-button slds-button_brand" id="toggleLastStep">Toggle Last Step</button>
+    <select id="select1">
+        <option value="">Select an option</option>
+        <option value="someMessage">Some SMS</option>
+        <option value="anotherMessage">Another SMS</option>
+        <option value="thirdMessage">Third SMS</option>
+        <option value="unknownMessage">Unknown SMS</option>
+    </select>
 
+    <button id="toggleLastStep">Toggle Last Step</button>
     
     </div>
 <div id="step2" class="step">
