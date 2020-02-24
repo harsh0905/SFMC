@@ -14,22 +14,14 @@
     "arguments": {
         "execute": {
             "inArguments": [
-                {
-                    "emailAddress": "{{InteractionDefaults.Email}}"
-                },
-                {
-                    "phoneNumber": "{{Contact.Default.PhoneNumber}}"
-                }
             ],
             "outArguments": [
-                {
-                    "foundSignupDate": ""
-                }
             ],
             "url": "https://createappharsh.herokuapp.com"
         }
     },
     "configurationArguments": {
+       "applicationExtensionKey": "f0d991aa-2841-40f6-ba2b-3eb3ad66e116",
        "save": {
            "url": "URI/for/your/activity/save"
        },
@@ -44,10 +36,7 @@
        }
     },
     "wizardSteps": [
-       { "label": "Step 1", "key": "step1" },
-       { "label": "Step 2", "key": "step2" },
-       { "label": "Step 3", "key": "step3" },
-       { "label": "Step 4", "key": "step4", "active": false }
+       { "label": "Step 1", "key": "step1" }
     ],
     "userInterfaces": {
        "configModal": {
@@ -60,29 +49,9 @@
         "arguments": {
             "execute": {
                 "inArguments": [
-                    {
-                        "phoneNumber": {
-                            "dataType": "Phone",
-                            "isNullable": true,
-                            "direction": "in"   
-                        }
-                    },
-                    {
-                        "emailAddress": {
-                            "dataType": "Email",
-                            "isNullable": true,
-                            "direction": "in"
-                        }
-                    }
+                  
                 ],
                 "outArguments": [
-                    {
-                        "foundSignupDate": {
-                            "dataType": "Date",
-                            "direction": "out",
-                            "access": "visible"
-                        }
-                    }
                 ]
             }
         }
