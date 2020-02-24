@@ -1,3 +1,39 @@
+<aura:component access="global">
+    <aura:attribute name="greeting" type="String" default="World"/>
+    <div class="slds-card">
+        <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
+            
+            <div id="step1" class="step">
+
+    Select your SMS message:
+
+  
+      <select class="slds-select" id="select1">
+        <option value="">Please select</option>
+        <option value="someMessage">Some SMS</option>
+        <option value="">Another SMS</option>
+        <option value="anotherMessage">Third SMS</option>
+        <option value="unknownMessage">Unknown SMS</option>
+      </select>
+    
+    
+    
+    <br>
+    <br>
+    
+   <!-- <button id="toggleLastStep">Toggle Last Step</button> -->
+    
+    <button id="toggleLastStep" class="slds-button slds-button_neutral">Toggle Last Step</button>
+    </div>
+            
+            
+            
+        </div>
+    </div>
+</aura:component>
+      
+
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -45,40 +81,7 @@
 </head>
     <body>
 
-  <aura:component access="global">
-    <aura:attribute name="greeting" type="String" default="World"/>
-    <div class="slds-card">
-        <div class="slds-card__body slds-card__body_inner slds-p-top_medium">
-            
-            <div id="step1" class="step">
-
-    Select your SMS message:
-
   
-      <select class="slds-select" id="select1">
-        <option value="">Please select</option>
-        <option value="someMessage">Some SMS</option>
-        <option value="">Another SMS</option>
-        <option value="anotherMessage">Third SMS</option>
-        <option value="unknownMessage">Unknown SMS</option>
-      </select>
-    
-    
-    
-    <br>
-    <br>
-    
-   <!-- <button id="toggleLastStep">Toggle Last Step</button> -->
-    
-    <button id="toggleLastStep" class="slds-button slds-button_neutral">Toggle Last Step</button>
-    </div>
-            
-            
-            
-        </div>
-    </div>
-</aura:component>
-      
         
         
         
