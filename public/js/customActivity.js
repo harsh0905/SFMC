@@ -114,7 +114,7 @@ define([
     function onGotoStep (step) {
         showStep(step);
         connection.trigger('ready');
-    }
+    } 
 
     function showStep(step, stepIndex) {
         if (stepIndex && !step) {
