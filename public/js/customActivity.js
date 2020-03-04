@@ -49,6 +49,35 @@ define([
 
             connection.trigger('updateSteps', steps);
         });
+        
+        
+        
+        
+        
+//Send Whatsap Message - Harsh
+        $('#sendWhatsapMsg').click(function() {
+           const accountSid = 'AC01f2068d7fe8381af5cff0b48d5492b8';
+const authToken = '5ce64d94bb79c87be10c3382b2bc6705';
+const client = require('twilio')(accountSid, authToken);
+
+client.messages
+      .create({
+         from: 'whatsapp:+14155238886',
+         body: 'Hello there!',
+         to: 'whatsapp:+16692378243'
+       })
+      .then(message => console.log(message.sid));
+            connection.trigger('updateSteps', steps);
+        });
+
+
+
+
+        
+        
+        
+        
+        
     }
 
     function initialize (data) {
